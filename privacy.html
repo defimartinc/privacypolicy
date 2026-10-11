@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy | DefiMart</title>
+  <meta name="description" content="Official DefiMart Privacy Policy detailing how campus user data, phone contacts, vendor order processing, and transactional SMS are safeguarded.">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,500;0,600;0,700;0,800;1,800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* DefiMart Official Brand Palette */
+      --primary: #FF8A00;
+      --primary-bright: #FFA439;
+      --primary-dark: #C2610A;
+      --primary-deep: #8A3F03;
+      --primary-soft: rgba(255, 138, 0, 0.1);
+      --primary-tint: rgba(255, 138, 0, 0.05);
+      
+      --gold: #F4B860;
+      --bg: #FFFDF9;
+      --bg-soft: #FFF8EF;
+      --surface: #FFFFFF;
+      --surface-subtle: #FAF6EF;
+      --surface-ink: #100F1A;
+      --surface-ink-soft: #1B1A2B;
+      
+      --text-main: #12111C;
+      --text-muted: #5B6070;
+      --text-dim: #848B9E;
+      
+      --border: rgba(18, 17, 28, 0.08);
+      --border-accent: rgba(255, 138, 0, 0.22);
+      
+      --shadow-sm: 0 4px 14px rgba(18, 17, 28, 0.05);
+      --shadow-lg: 0 24px 50px -12px rgba(18, 17, 28, 0.08), 0 0 1px rgba(18, 17, 28, 0.05);
+      --shadow-primary: 0 12px 30px -8px rgba(255, 138, 0, 0.35);
+
+      --radius-xl: 32px;
+      --radius-lg: 24px;
+      --radius-md: 16px;
+      --radius-sm: 10px;
+      --radius-pill: 9999px;
+
+      --font-display: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      --font-body: 'Manrope', system-ui, -apple-system, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: var(--bg);
+      color: var(--text-main);
+    }
+
+    body {
+      font-family: var(--font-body);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      background: radial-gradient(circle at 15% 5%, rgba(255, 138, 0, 0.08) 0%, transparent 40%),
+                  radial-gradient(circle at 85% 25%, rgba(244, 184, 96, 0.07) 0%, transparent 45%),
+                  var(--bg);
+    }
+
+    /* Ambient Warm Glow Shapes */
+    .glow-aura-1 {
+      position: fixed;
+      top: -200px;
+      left: -100px;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(255, 138, 0, 0.12) 0%, transparent 70%);
+      filter: blur(100px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .glow-aura-2 {
+      position: fixed;
+      bottom: -150px;
+      right: -100px;
+      width: 550px;
+      height: 550px;
+      background: radial-gradient(circle, rgba(255, 164, 57, 0.09) 0%, transparent 70%);
+      filter: blur(100px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Header Nav */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255, 253, 249, 0.88);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border);
+      transition: all 0.25s ease;
+    }
+
+    .nav-container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .brand-img {
+      height: 40px;
+      width: auto;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+
+    .brand-fallback {
+      display: none;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .brand-fallback-icon {
+      width: 38px;
+      height: 38px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 20px;
+      box-shadow: 0 4px 14px rgba(255, 138, 0, 0.35);
+    }
+
+    .brand-fallback-text {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--text-main);
+      letter-spacing: -0.03em;
+    }
+
+    .brand-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-display);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      background: var(--bg-soft);
+      color: var(--primary-dark);
+      padding: 6px 14px;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--border-accent);
+    }
+
+    .badge-dot {
+      width: 6px;
+      height: 6px;
+      background: var(--primary);
+      border-radius: 50%;
+      box-shadow: 0 0 8px var(--primary);
+    }
+
+    /* Main Container */
+    main {
+      flex: 1;
+      max-width: 900px;
+      width: 100%;
+      margin: 32px auto 70px;
+      padding: 0 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Main Card */
+    .policy-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: clamp(28px, 6vw, 64px);
+      box-shadow: var(--shadow-lg);
+      position: relative;
+    }
+
+    .policy-hero {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 36px;
+      margin-bottom: 40px;
+    }
+
+    .meta-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--primary-dark);
+      background: var(--primary-soft);
+      padding: 4px 12px;
+      border-radius: var(--radius-pill);
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 5vw, 3.2rem);
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      line-height: 1.15;
+      color: var(--text-main);
+      margin-bottom: 16px;
+    }
+
+    .policy-intro {
+      font-size: 1.1rem;
+      font-weight: 500;
+      line-height: 1.7;
+      color: var(--text-muted);
+      border-left: 3.5px solid var(--primary);
+      padding: 8px 0 8px 20px;
+      background: var(--primary-tint);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    }
+
+    /* Policy Sections */
+    .section {
+      margin-bottom: 44px;
+    }
+
+    .section:last-of-type {
+      margin-bottom: 0;
+    }
+
+    h2 {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--text-main);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .section-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      background: var(--bg-soft);
+      color: var(--primary);
+      border: 1px solid var(--border-accent);
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+
+    p {
+      color: var(--text-muted);
+      font-size: 1rem;
+      line-height: 1.75;
+      margin-bottom: 14px;
+    }
+
+    p strong {
+      color: var(--text-main);
+      font-weight: 700;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Custom Informational Callout Cards */
+    .callout {
+      background: var(--surface-subtle);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 22px 24px;
+      margin-top: 16px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .callout.accent {
+      background: #FFFDF7;
+      border-color: rgba(255, 138, 0, 0.3);
+      box-shadow: 0 4px 16px -6px rgba(255, 138, 0, 0.15);
+    }
+
+    .callout-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: var(--primary-soft);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .callout-content p {
+      font-size: 0.95rem;
+      color: #374151;
+      margin: 0;
+    }
+
+    /* Structured Feature Items */
+    .data-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .data-row {
+      background: #FAFAFC;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 16px 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .data-row:hover {
+      transform: translateY(-2px);
+      border-color: var(--border-accent);
+      background: #FFFFFF;
+    }
+
+    .data-row-icon {
+      color: var(--primary);
+      font-size: 1.1rem;
+      line-height: 1.4;
+      flex-shrink: 0;
+    }
+
+    .data-row-text {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .data-row-text strong {
+      color: var(--text-main);
+      font-weight: 700;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border);
+      background: var(--surface);
+      padding: 36px 20px;
+      text-align: center;
+      margin-top: auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .back-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--bg-soft);
+      color: var(--primary-dark);
+      border: 1px solid var(--border-accent);
+      padding: 10px 22px;
+      border-radius: var(--radius-pill);
+      font-family: var(--font-display);
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .back-action:hover {
+      background: var(--primary);
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-primary);
+    }
+
+    .footer-legal {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+    }
+
+    @media (max-width: 640px) {
+      .policy-card {
+        padding: 24px 18px;
+        border-radius: 20px;
+      }
+      .nav-container {
+        padding: 14px 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="glow-aura-1"></div>
+  <div class="glow-aura-2"></div>
+
+  <header>
+    <div class="nav-container">
+      <a href="/" class="brand-link" aria-label="DefiMart Home">
+        <img 
+          src="/app_logo.png" 
+          alt="DefiMart" 
+          class="brand-img" 
+          onerror="this.style.display='none'; document.getElementById('brand-fallback').style.display='inline-flex';"
+        />
+        <div id="brand-fallback" class="brand-fallback">
+          <div class="brand-fallback-icon">D</div>
+          <span class="brand-fallback-text">DefiMart</span>
+        </div>
+      </a>
+      <div class="brand-badge">
+        <span class="badge-dot"></span>
+        <span>Official Policy</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <article class="policy-card">
+      <div class="policy-hero">
+        <div class="meta-tag">
+          Last Updated: July 26, 2026
+        </div>
+        <h1>Privacy Policy</h1>
+        <div class="policy-intro">
+          DEFIMART ("the Platform") respects the privacy of its users. This policy outlines how we handle, protect, and process data across our multi-vendor campus marketplace.
+        </div>
+      </div>
+
+      <section class="section" id="section-1">
+        <h2><span class="section-num">1</span> Information We Collect</h2>
+        <p>We collect essential data to facilitate secure campus trade and reliable fulfillment. This includes:</p>
+        <div class="data-grid">
+          <div class="data-row">
+            <span class="data-row-icon">✦</span>
+            <div class="data-row-text">
+              <strong>Identity & Authentication:</strong> Full name, email address, and optional profile pictures used to personalize your account and identify you during pickups.
+            </div>
+          </div>
+          <div class="data-row">
+            <span class="data-row-icon">✦</span>
+            <div class="data-row-text">
+              <strong>Communication Data:</strong> Valid phone number, which is required to send order updates, verify transactions, and coordinate physical collections.
+            </div>
+          </div>
+          <div class="data-row">
+            <span class="data-row-icon">✦</span>
+            <div class="data-row-text">
+              <strong>Activity & History:</strong> Order logs, wishlist items, saved cart details, and product reviews to provide seamless navigation and personalized catalog recommendations.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="section-2">
+        <h2><span class="section-num">2</span> Information Sharing With Vendors</h2>
+        <p>When you place an order with an <strong>Independent Student Vendor</strong> on DefiMart, we share your display name, phone number, and delivery location with that vendor.</p>
+        <p>This disclosure is necessary solely so the seller can verify your order and coordinate the physical handover or pickup on campus. <strong>Vendors are strictly prohibited from using your contact info for unsolicited advertising. DefiMart never shares your email address or passwords with independent vendors.</strong></p>
+      </section>
+
+      <section class="section" id="section-3">
+        <h2><span class="section-num">3</span> Transactional SMS & Alerts</h2>
+        <p>We use your registered phone number to deliver order-critical updates. This includes automated SMS alerts when an order is "Ready for Pickup", when a seller accepts your order, or when an item is out for campus delivery.</p>
+        <div class="callout accent">
+          <div class="callout-icon">💬</div>
+          <div class="callout-content">
+            <p><strong>Transactional Consent:</strong> By using the platform, you consent to receive these essential order-status messages. We do not transmit spam or sell your number to third-party SMS marketers.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="section-4">
+        <h2><span class="section-num">4</span> Data Storage & Platform Security</h2>
+        <p>Your records are kept in secure, encrypted cloud environments protected with access keys and strict token verification. We do not sell, rent, or lease your personal information to third-party advertising companies.</p>
+        <p>Your information is used strictly within the DefiMart ecosystem to improve order reliability, vendor verification, and system security.</p>
+      </section>
+
+      <section class="section" id="section-5">
+        <h2><span class="section-num">5</span> Public Content & Reviews</h2>
+        <p>Reviews, comments on marketplace feeds, and public shop ratings are visible to all users of the platform. Please exercise discretion when writing reviews and avoid posting sensitive personal details, passwords, or private room numbers in public review fields.</p>
+      </section>
+
+      <section class="section" id="section-6">
+        <h2><span class="section-num">6</span> Your Rights & Account Deletion</h2>
+        <p>You have full control over your personal data. You can inspect or update your profile details in your settings at any time.</p>
+        <div class="callout">
+          <div class="callout-icon">🛡️</div>
+          <div class="callout-content">
+            <p><strong>Permanent Deletion:</strong> You can initiate account deletion directly from your Profile settings or by contacting DefiMart administration. All personal identifying records will be purged upon verification.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="section-7">
+        <h2><span class="section-num">7</span> Contact Us</h2>
+        <p>If you have any questions, concerns, or requests regarding this Privacy Policy or your data on DefiMart, please contact our support team:</p>
+        <div class="callout">
+          <div class="callout-icon">✉️</div>
+          <div class="callout-content">
+            <p>Reach out through the in-app Contact & Support screen, or visit the DefiMart administration desk on campus.</p>
+          </div>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <a href="javascript:history.back()" class="back-action" id="back-button">
+        ← Return to DefiMart
+      </a>
+      <span class="footer-legal">&copy; <span id="year"></span> DEFIMART. ALL RIGHTS RESERVED.</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
